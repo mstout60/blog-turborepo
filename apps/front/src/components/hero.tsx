@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div className="bg-gradient-to-br from-sky-500 to-indigo-500 text-white pt-20 sm:pt-18 md:pt-12">
+    <div className="bg-gradient-to-br from-sky-500 to-indigo-500 text-white  pt-16">
       <div className="container mx-auto flex flex-col md:flex-row items-center flex-wrap px-3">
         {/* Left Col */}
         <div className="flex flex-col w-full justify-center items-start md:w-2/5 text-center md:text-left">
@@ -18,12 +18,14 @@ const Hero = () => {
         </div>
         {/* Right Col */}
         <div className="w-full flex justify-center text-center py-7 md:w-3/5">
-          <img src="/hero.svg" alt="hero section" className="w-full md:w-3/4 z-30" />
+          <img
+            src="/hero.svg"
+            alt="hero section"
+            className="w-full md:w-3/4 "
+          />
         </div>
       </div>
-      <div className="relative -mt-10 lg:-mt-24">
-
-      </div>
+      <div className="relative -mt-10 lg:-mt-24"></div>
     </div>
   );
 };
