@@ -54,8 +54,6 @@ export class AuthService {
       },
     });
 
-    console.log('Auth Server ValidateJwtUser: ', user);
-
     if (!user) throw new UnauthorizedException('User not found!');
 
     const currentUser = { id: user.id };
