@@ -1,14 +1,17 @@
 import { Post } from "@/lib/types/modelTypes";
 import React from "react";
 import PostCard from "./post-card";
+import Pagination from "./pagination";
 
 type Props = {
   posts: Post[];
+  currentPage: number;
+  totalPages: number;
 };
 
 const Posts = (props: Props) => {
   return (
-    <section>
+    <section className="container m-8 max-w-5xl mx-auto">
       <h2 className="text-5xl font-bold text-center text-gray-600 leading-tight">
         Latest Posts
       </h2>
@@ -18,6 +21,7 @@ const Posts = (props: Props) => {
           <PostCard key={post.id} {...post} />
         ))}
       </div>
+      <Pagination />
     </section>
   );
 };
