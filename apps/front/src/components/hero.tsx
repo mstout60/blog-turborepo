@@ -17,7 +17,7 @@ const Hero = () => {
           </p>
         </div>
         {/* Right Col */}
-        <div className="w-full flex justify-center text-center py-7 md:w-3/5">
+        <div className="w-full flex justify-center text-center py-7 md:w-3/5 z-10">
           <img
             src="/hero.svg"
             alt="hero section"
@@ -25,7 +25,9 @@ const Hero = () => {
           />
         </div>
       </div>
-      <div className="relative -mt-10 lg:-mt-24"></div>
+      <div className="relative -mt-10 lg:-mt-24">
+        <img src="/wave.jpg" alt="wave"/>
+      </div>
     </div>
   );
 };
