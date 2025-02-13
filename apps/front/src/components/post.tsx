@@ -21,7 +21,11 @@ const Posts = (props: Props) => {
           <PostCard key={post.id} {...post} />
         ))}
       </div>
-      <Pagination />
+      <Pagination
+        className="mt-4"
+        currentPage={props.currentPage}
+        totalPages={props.totalPages}
+      />
     </section>
   );
 };

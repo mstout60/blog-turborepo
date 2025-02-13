@@ -44,7 +44,7 @@ export function calculatePageNumbers({
 
   return Array.from(
     {
-      length: totalNumbers,
+      length: totalPages,
     },
     (_, i) => i + 1
   );

@@ -23,12 +23,12 @@ async function main() {
     data: users,
   });
 
-  const posts = Array.from({ length: 40 }).map(() => ({
+  const posts = Array.from({ length: 400 }).map(() => ({
     title: faker.lorem.sentence(),
     slug: generateSlug(faker.lorem.sentence()),
     content: faker.lorem.paragraphs(3),
     thumbnail: faker.image.urlLoremFlickr(),
-    authorId: faker.number.int({ min: 11, max: 20 }),
+    authorId: faker.number.int({ min: 1, max: 10 }),
     published: true,
   }));
 
@@ -42,7 +42,7 @@ async function main() {
               createMany: {
                 data: Array.from({ length: 20 }).map(() => ({
                   content: faker.lorem.sentence(),
-                  authorId: faker.number.int({ min: 11, max: 20 }),
+                  authorId: faker.number.int({ min: 1, max: 10 }),
                 })),
               },
             },

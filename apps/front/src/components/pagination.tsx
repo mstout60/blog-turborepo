@@ -24,7 +24,7 @@ const Pagination = ({
   });
 
   return (
-    <div className="flex items-center justify-center gap-2">
+    <div className={cn("flex items-center justify-center gap-2", className)}>
       {/* Previous page button */}
       {currentPage !== 1 && (
         <button className={cn("rounded-md bg-slate-200 py-2 px-2")}>
@@ -40,9 +40,10 @@ const Pagination = ({
           className={cn("px-3 py-1 rounded-md transition hover:text-sky-600", {
             "bg-slate-200": currentPage !== page && page !== "...",
             "bg-blue-500 text-white": currentPage === page,
+            "cursor-not-allowed": page === "...",
           })}
         >
-          <Link href={`?page=${page}`}>{page}</Link>
+          {page === "..." ? "..." : <Link href={`?page=${page}`}>{page}</Link>}
         </button>
       ))}
       {/* next page button */}
