@@ -8,8 +8,8 @@ export const SignUpFormSchema = z.object({
     .min(8)
     .regex(/[a-zA-Z]/, { message: "Contain at least on letter." })
     .regex(/[0-9]/, { message: "Contain at least on number." })
-    .regex(/[^[a-zA-Z0-9]]/, {
-      message: "Contain at least one special character.",
-    })
+    // .regex(/[^[a-zA-Z0-9]]/, {
+    //   message: "Contain at least one special character.",
+    // })
     .trim(),
 });
